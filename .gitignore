@@ -1,0 +1,11 @@
+# Ignore python cache
+__pycache__/
+*.pyc
+
+# Ignore Security Secrets (DO NOT UPLOAD THESE)
+common/*.pem
+common/*.key
+edge/integrity_hash.txt
+
+# Ignore Docker data
+.env

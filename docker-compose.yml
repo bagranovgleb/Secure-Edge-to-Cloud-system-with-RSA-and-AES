@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  cloud-app:
+    build:
+      context: .
+      dockerfile: cloud/Dockerfile
+    container_name: cloud_storage
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./cloud/database:/app/database
+
+  edge-app:
+    build:
+      context: .
+      dockerfile: edge/Dockerfile
+    container_name: edge_mpu
+    depends_on:
+      - cloud-app
+    environment:
+      - CLOUD_URL=http://cloud-app:5000/upload
+    volumes:
+      - ./edge/secure_vault:/app/secure_vault
