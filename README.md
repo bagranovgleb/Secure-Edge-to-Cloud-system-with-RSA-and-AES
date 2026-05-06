@@ -15,6 +15,7 @@ A security-focused IoT simulation featuring a complete "Chain of Trust" between 
 ### 1. Initialize the Environment
 Before starting, generate the keys and the cryptographic fingerprint:
 
+```bash
 ### 1. Generate the RSA and AES keys
 python generate_keys.py
 
@@ -25,6 +26,7 @@ python generate_integrity.py
 ### 3. Launch the System. Run the containers using Docker:
 
 docker-compose up --build
+```
 
 ## 🧪 Testing Defenses
 
