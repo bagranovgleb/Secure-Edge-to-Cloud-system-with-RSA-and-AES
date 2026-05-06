@@ -24,7 +24,6 @@ python generate_integrity.py
 
 
 ### 3. Launch the System. Run the containers using Docker:
-
 docker-compose up --build
 ```
 
@@ -42,4 +41,4 @@ edge/: Contains the MPU application and Secure Boot utilities.
 
 cloud/: Contains the server logic handling authentication and decryption.
 
-common/: Stores the cryptographic keys (private keys are protected via .gitignore).
+common/: Stores the cryptographic keys.
