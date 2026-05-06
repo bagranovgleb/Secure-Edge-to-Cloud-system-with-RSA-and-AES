@@ -14,15 +14,15 @@ A security-focused IoT simulation featuring a complete "Chain of Trust" between 
 
 ### 1. Initialize the Environment
 Before starting, generate the keys and the cryptographic fingerprint:
-```bash
-# 1. Generate the RSA and AES keys
+
+### 1. Generate the RSA and AES keys
 python generate_keys.py
 
-# 2. Generate the Secure Boot fingerprint for edge_app.py
+### 2. Generate the Secure Boot fingerprint for edge_app.py
 python generate_integrity.py
 
 
-# 3. Launch the System. Run the containers using Docker:
+### 3. Launch the System. Run the containers using Docker:
 
 docker-compose up --build
 
