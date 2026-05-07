@@ -8,7 +8,7 @@ from common.crypto_utils import SecureMpuStorage
 
 app = Flask(__name__)
 DB_PATH = "./database"
-HARDWARE_SECRET = "mpu-device-serial-998877" # Cloud needs this to check Defense E
+HARDWARE_SECRET = "mpu-device-serial-998877" # Cloud needs this to check Defense
 secure_storage = SecureMpuStorage(HARDWARE_SECRET)
 
 if not os.path.exists(DB_PATH):
